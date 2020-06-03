@@ -21,9 +21,19 @@ const fetchInfoReceive = data => {
   };
 };
 
+// redux-thunk写法
 export const fetchInfo = () => dispatch => {
   dispatch(fetchInfoRequest());
   return fetch('https://my-json-server.typicode.com/kevindongzg/demo/info')
     .then(res => res.json())
     .then(data => dispatch(fetchInfoReceive(data)));
 };
+
+// redux-promise写法
+// export const fetchInfo = dispatch =>
+//   new Promise(resolve => {
+//     dispatch(fetchInfoRequest());
+//     return fetch('https://my-json-server.typicode.com/kevindongzg/demo/info').then(res =>
+//       resolve(fetchInfoReceive(res.json()))
+//     );
+//   });

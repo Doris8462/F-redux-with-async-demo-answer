@@ -23,9 +23,14 @@ const mapDispatchToProps = dispatch => ({
   handleNameChange(event) {
     dispatch(setName(event.target.value));
   },
+  // redux-thunk写法
   handleInfoChange() {
     dispatch(fetchInfo());
   }
+  // redux-Promise写法
+  // handleInfoChange() {
+  //   dispatch(fetchInfo(dispatch));
+  // }
 });
 
 // const mapDispatchToProps = {
