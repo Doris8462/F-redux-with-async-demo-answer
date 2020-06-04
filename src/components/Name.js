@@ -34,7 +34,8 @@ const mapDispatchToProps = dispatch => ({
 });
 
 // const mapDispatchToProps = {
-//   handleNameChange: event => setName(event.target.value)
+//   handleNameChange: event => setName(event.target.value),
+//   handleInfoChange: fetchInfo
 // };
 
 export default connect(null, mapDispatchToProps)(Name);
